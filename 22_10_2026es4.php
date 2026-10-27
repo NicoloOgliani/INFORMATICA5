@@ -14,13 +14,13 @@
                     case "calcola":{
                         $raggio=$_GET["raggio"];
                         //calcoli
-                        $circonferenza=2*M_PI*$raggio;
-                        $area=M_PI*pow($raggio, 2);
+                        $circonferenza=2*3.14*$raggio;
+                        $area=3.14*$raggio* $raggio;
 
                         echo('<div class="container-fluid mt-3">');
                         echo('<h2>RIsultati raggio:' .$raggio. '</h2>');
-                        echo('La circonferenza è: '.number_format($circonferenza, 2).'<br />');
-                        echo('L\'area del cerchio è: '.number_format($area, 2).'<br /><br />');
+                        echo('La circonferenza è: '.$circonferenza.'<br />');
+                        echo('L\'area del cerchio è: '.$area.'<br /><br />');
                         echo('<a href="22_10_2026es4.php" class="btn btn-secondary">Torna al form...</a>');
                         echo('</div>');
                         break;
@@ -33,10 +33,10 @@
                     <form action="22_10_2026es4.php" method="get">
                         <div class="mb-3">
                             <label for="inputA" class="form-label">Misura raggio</label>
-                            <input class="form-control form-control-lg" type="text" name="raggio" id="raggio" placeholder="Valore di A" aria-label="default input example">
+                            <input class="form-control form-control-lg" type="text" name="raggio" id="raggio" placeholder="Valore del raggio" aria-label="default input example">
                         </div>
                         <input type="hidden" name="scelta" id="scelta" value="calcola">
-                        <button class="btn btn-success" type="submit">Inoltra il Form</button>
+                        <button class="btn btn-primary" type="submit">Calcola area e circonferenza</button>
                     </form>            
                 </div>');
             }
